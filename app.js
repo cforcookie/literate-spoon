@@ -1,30 +1,6 @@
-const q = Number(prompt('Insert number'));
-if (q === 7) {
-    console.log('Currect');
-}
+const bmwX3Price = 100000;
+const budget = 20000;
 
-else {
-    console.log('Incurrect');
-}
+let message;
 
-switch (q) {
-    case 7:
-        console.log('Currect');
-        break;
-    default:
-        console.log('Incurrect');
-}
-
-
-const num = Number(prompt('Insert number'));
-
-switch (true) {
-    case num > 0:
-        console.log('> 0');
-        break;
-    case num < 0:
-        console.log('< 0');
-        break;
-    default:
-        console.log('null');
-}
+console.log(`I want buy ${budget > bmwX3Price ? 'BMW' : 'Cycle'}`);

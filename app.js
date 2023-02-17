@@ -1,23 +1,30 @@
-/*
-Методом prompt получите ответ пользователя на вопрос 
-"Сколько будет 7 + или - 15?". Если ответ верен, выведите в 
-консоли "Успех", если нет - "Вы робот!", а если он 
-введёт "Я не робот", то тоже "Успех".
-*/
+const guyAge = 25;
+const heHaveWork = true;
+const haveMoney = 1500;
 
-// const anser = prompt("Сколько будет 7 + или - 15?");
+let cheakMoney = (money, credit) => {
+    if (money + credit >= 2000) {
+        return true;
+    }
+    return false;
+}
 
-// switch (true) {
-//     case Number(anser) === 22:
-//     case Number(anser) === -8:
-//     case 'Я не робот':
-//         console.log('Успех');
-//         break;
-//     default:
-//         console.log('Вы робот');    
-// }
-console.log(String('10') - 5 + Boolean('') + '1');
+function prufCredit(age, haveWork, money) {
+    let credit;
+    
+    if (haveWork == true && age > 24) {
+        credit = 500;
+        return cheakMoney(money, credit);
 
-console.log(true && false || false);
+    } if (haveWork == false && age > 24) {
+        credit = 100;
+        return cheakMoney(money, credit);
+    }
+    credit = 0;
+    return cheakMoney(money, credit);
+    
+}
 
-console.log(!'' && 'Yes' || !('No' && 'false'))
+const result = prufCredit(guyAge, heHaveWork, haveMoney);
+
+console.log(result);

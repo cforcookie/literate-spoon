@@ -8,7 +8,7 @@ function Remove (name) {
     const index = tasks.indexOf(name);
 
     if (index === -1) {
-        return
+        return;
     }
 
     tasks.splice(index, 1);
@@ -16,12 +16,12 @@ function Remove (name) {
 
 function Prioritize (name) {
     const index = tasks.indexOf(name);
-    const oldTask = tasks[index];
     
     if (index === -1) {
-        return
+        return;
     }
-    
+
+    const oldTask = tasks[index];
     tasks.splice(index, 1);
     tasks.unshift(oldTask);
 }
@@ -30,4 +30,6 @@ Add('new 1');
 Add('new 2');
 console.log(tasks);
 Remove('new 2');
+console.log(tasks);
+Prioritize('new 1');
 console.log(tasks);

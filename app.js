@@ -11,19 +11,15 @@ function Remove (name) {
         return;
     }
 
-    tasks.splice(index, 1);
+     return tasks.splice(index, 1);
 }
 
 function Prioritize (name) {
-    const index = tasks.indexOf(name);
-    
-    if (index === -1) {
+    const result = Remove(name);
+    if (!result) {
         return;
     }
-
-    const oldTask = tasks[index];
-    tasks.splice(index, 1);
-    tasks.unshift(oldTask);
+    tasks.unshift(result[0]);
 }
 
 Add('new 1');

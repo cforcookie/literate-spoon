@@ -1,4 +1,6 @@
 const roles = ['admin', 'user', 'manager'];
 
-console.log(roles.indexOf('admin'));
-console.log(roles.includes('admin'));
+const url = 'auth/user/login';
+const res = url.split('/');
+console.log(res);
+console.log(roles.join(' '))

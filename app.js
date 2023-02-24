@@ -1,6 +1,8 @@
-const arr = ['!', 'JS', 'love', 'I'];
-let res = [];
-for (let i = arr.length - 1; i >= 0; i-- ) {
-    res.push(arr[i]);
+const arr = [1, 2, 3, 4];
+for (let element of arr) {
+    console.log(element);
 }
-console.log(res.join(' '));
+
+for (let element in arr) {
+    console.log(element);
+}

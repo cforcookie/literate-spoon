@@ -1,8 +1,24 @@
-const arr = [2, 4, 4, 10, 20];
+const operactions = [100, 300, -100, -300];
+console.log(operactions);
 
-function some (element, arr) {
-    console.log(arr.find(el => el == element));
-}
+// ! Сортировка по возростанию
+operactions.sort((a, b) => {
+    if (a > b) {
+        return 1;
+    }
+    if (a < b) {
+        return -1;
+    }
+});
 
-some(10, arr);
-console.log(arr.some(el => el === 0))
+// ! Сортировка по убыванию
+operactions.sort((a, b) => {
+    if (a < b) {
+        return 1;
+    }
+    if (a > b) {
+        return -1;
+    }
+});
+
+console.log(operactions);

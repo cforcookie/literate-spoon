@@ -1,24 +1,14 @@
-const operactions = [100, 300, -100, -300];
-console.log(operactions);
+const user = {
+    name: 'Alex',
+    surname: 'Jhonson',
+    age: '20',
+    skills: [
+        'Programming',
+        'Cooking'
+    ]
+};
 
-// ! Сортировка по возростанию
-operactions.sort((a, b) => {
-    if (a > b) {
-        return 1;
-    }
-    if (a < b) {
-        return -1;
-    }
-});
-
-// ! Сортировка по убыванию
-operactions.sort((a, b) => {
-    if (a < b) {
-        return 1;
-    }
-    if (a > b) {
-        return -1;
-    }
-});
-
-console.log(operactions);
+console.log(user);
+console.log(user.name);
+console.log(user.skills[0]);
+console.log(user['skills']);

@@ -1,8 +1,22 @@
-const users = [
-    {name: 'Alex', age: 20},
-    {name: 'Roma', age: 18},
-    {name: 'Alina', age: 22},
-    {name: 'Vova', age: 30}
-];
+'use strict';
+/*
+Создайте объект пользователя с паролем.
+С помощью функции ниже удалить пароль сделав
+функцию сброса пароля
+*/
 
-console.log(users.sort((a, b) => a.age - b.age));
+function removePassword(reset) {
+    if (reset) {
+        this.password = undefined;
+    } else {
+        this.password = '1';
+    }
+}
+
+const user = {
+    password: 1234
+};
+
+const resetPassword = removePassword.bind(user, true);
+resetPassword();
+console.log(user);
